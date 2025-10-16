@@ -26,26 +26,20 @@ public class EJ11 {
 		
 		
 		//condicion es mayor o no  
+		
 		if (hora <= 35){
 			salBr = hora * tarNor;
-			if (salBr <=500 ) {
-				imp = 0;  
-			}else if (salBr <=900) {
-					imp = (salBr-500)*0.25;
 			}else {
-					imp=(400*0.25)+(salBr-900)*0.25;
+					salBr = 35 * tarNor+ (hora-35)*(tarNor*1.5);
 				}
-			} else {
-			salBr = 35 *tarNor;
-			hora=hora-35;
-			salBr = salBr+ hora * (tarNor*1.5);
-			if (salBr<=500) {
-				imp = 0;  
-			}else if (salBr <=900) {
-					imp = (salBr-500)*0.25;
-			}else {
-					imp=(400*0.25)+(salBr-900)*0.25;
-				}
+		
+		
+		if (salBr <=500 ) {
+			imp = 0;  
+		}else if (salBr <=900) {
+				imp = (salBr-500)*0.25;
+		}else {
+				imp=(400*0.25)+(salBr-900)*0.45;
 			}
 		
 			
