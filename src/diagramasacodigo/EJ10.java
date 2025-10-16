@@ -28,11 +28,13 @@ public class EJ10 {
 			seg = seg- 59;
 			if (min==60) {
 				++hora; 
-				min = min - 60; 
+				min = min - min; 
 				if (hora == 24) {
-					hora = hora -24; 
+					hora = hora - hora; 
 				}
 			}
+		}else {
+			seg++;
 		}
 			
 		System.out.println(hora +":"+min+":"+seg);
