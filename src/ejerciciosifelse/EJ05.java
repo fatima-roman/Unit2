@@ -17,11 +17,9 @@ public class EJ05 {
 		
 		if (item.equals(item2) ) {
 				System.out.println("EMPATE");
-		} else if (item.equals("PIEDRA")&& item2.equals("TIJERA")) {
-			System.out.println("GANA 1");
-		} else if (item2.equals("PIEDRA")&& item.equals("PAPEL")) {
-			System.out.println("GANA 1");
-		}else if (item.equals("TIJERA")&& item2.equals("PAPEL")) {
+		} else if ((item.equals("PIEDRA")&& item2.equals("TIJERA"))
+				||(item2.equals("PIEDRA")&& item.equals("PAPEL"))
+				||(item.equals("TIJERA")&& item2.equals("PAPEL"))) {
 			System.out.println("GANA 1");
 		} else {
 			System.out.println("GANA 2");
