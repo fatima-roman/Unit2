@@ -16,7 +16,7 @@ public class EJ02 {
 		num = sc.nextDouble();
 		
 		//condicion es mayor o no  
-		if (num!=0 && num <=1 && num >= -1) {
+		if (num!=0 && num <1 && num > -1) {
 			System.out.println("CASI-CERO");
 		}else {
 			System.out.println("NUM");
