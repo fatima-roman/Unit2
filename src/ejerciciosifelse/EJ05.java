@@ -15,33 +15,19 @@ public class EJ05 {
 		System.out.println("JUGADOR 2: Inteoduce otro item (PIEDRA, PAPEL O TIJERA): ");
 		item2 = sc.next().toUpperCase();
 		
-		if (item.equals("PIEDRA") ) {
-			if (item.equals(item2)) {
+		if (item.equals(item2) ) {
 				System.out.println("EMPATE");
-			} else if (item2.equals("PAPEL")) {
-				System.out.println("GANA JUGARDOR 2");
-			}else if (item2.equals("TIJERA")) {
-				System.out.println("GANA JUGADOR 1");
-			}
+		} else if (item.equals("PIEDRA")&& item2.equals("TIJERA")) {
+			System.out.println("GANA 1");
+		} else if (item2.equals("PIEDRA")&& item.equals("PAPEL")) {
+			System.out.println("GANA 1");
+		}else if (item.equals("TIJERA")&& item2.equals("PAPEL")) {
+			System.out.println("GANA 1");
+		} else {
+			System.out.println("GANA 2");
+
 		}
-		if (item.equals("PAPEL") ) {
-			if (item.equals(item2)) {
-				System.out.println("EMPATE");
-			} else if (item2.equals("TIJERA")) {
-				System.out.println("GANA JUGARDOR 2");
-			}else if (item2.equals("PIEDRA")) {
-				System.out.println("GANA JUGADOR 1");
-			}
-		}
-		if (item.equals("TIJERA") ) {
-			if (item.equals(item2)) {
-				System.out.println("EMPATE");
-			} else if (item2.equals("PIEDRA")) {
-				System.out.println("GANA JUGARDOR 2");
-			}else if (item2.equals("PAPEL")) {
-				System.out.println("GANA JUGADOR 1");
-			}
-		}
+		
 		
 		sc.close();
 	}
