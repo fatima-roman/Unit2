@@ -29,7 +29,7 @@ public class EJ03 {
 		
 		
 		//condicion es mayor o no  
-		if (x <= 0 || num1 <= 0) {
+		if (x < 0 || num1 == 0) {
 			System.out.println("no tiene solucines reales ");
 		} else {
 			x = (-num2 + Math.sqrt(x))/(2*num1);
