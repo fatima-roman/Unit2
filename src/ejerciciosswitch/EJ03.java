@@ -11,35 +11,36 @@ public class EJ03 {
 		//Create variables
 		int num1; 
 		int num2; 
-		int letra; 
+		String letra; 
 		
 		//Input for variables 
 		System.out.println("Introduce un num: ");
 		num1 = sc.nextInt();
 		System.out.println("Introduce un num: ");
 		num2 = sc.nextInt();
-		System.out.println("1. SUMAR LOS NÚMEROS\r\n"
-				+ "2. RESTAR LOS NÚMEROS\r\n"
-				+ "3. MULTIPLICAR LOS NÚMEROS\r\n"
-				+ "4. DIVIDIR LOS NÚMEROS\r\n"
+		System.out.println("A. SUMAR LOS NÚMEROS\r\n"
+				+ "B. RESTAR LOS NÚMEROS\r\n"
+				+ "C. MULTIPLICAR LOS NÚMEROS\r\n"
+				+ "D. DIVIDIR LOS NÚMEROS\r\n"
 				+ "\nIntroduce una opcion: ");
-		letra = sc.nextInt();
+		letra = sc.next().toUpperCase();
 		
 		//Evaluate and solve for the entered value
 		switch (letra) {
-		case 1:{ 
-			System.out.println("SUMAR LOS NUMEROS" + (num1+num2));
+		case "A":{ 
+			System.out.println("SUMAR LOS NUMEROS " + (num1+num2));
 			break;}
-		case 2:{ 
+		case "B":{ 
 			System.out.println("RESTAR LOS NUMEROS " + (num1-num2) );
 			break;}
 		
-		case 3:{ 
+		case "C":{ 
 			System.out.println("MULTIPLICAR LOS NUMEROS " + (num1*num2));
 			break;}
 		
-		case 4:{ 
-			System.out.println("DIVIDIR LOS NUMEROS " + (num1/num2));
+		case "D":{ 
+			System.out.println("DIVIDIR LOS NUMEROS ");
+			System.out.println(num2 ==0 ?"NO SE PUEDE":(num1/num2));
 			break;}
 		default:{
 			System.out.println("OPCIóN INCORRECTA");
