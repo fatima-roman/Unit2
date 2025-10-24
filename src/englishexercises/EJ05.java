@@ -35,13 +35,13 @@ public class EJ05 {
 		
 		if (v!=0 && d!=0) {
 			t= d/v;
-			System.out.println("RESULT: " + t);
+			System.out.println("RESULT: T = " + t);
 		}else if (v!=0 && t!=0) {
 				d=v*t;
-				System.out.println("RESULT: " + d);
+				System.out.println("RESULT: D = " + d);
 		}else if (d!=0 && t!=0) {
 			v=d/t;
-			System.out.println("RESULT: " + v);
+			System.out.println("RESULT: V = " + v);
 		}
 		
 		
