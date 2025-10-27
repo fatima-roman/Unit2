@@ -7,6 +7,7 @@ public class EJ05 {
 	public static void main(String[] args) {
 		/* PRUEBAS A REALIZAR
 		 * 1. Check negative numbers
+		 * 2. Letters outside switch 
 		 */
 		
 		// new scanner
