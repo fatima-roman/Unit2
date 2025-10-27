@@ -13,25 +13,31 @@ public class EJ05 {
 		Scanner sc = new Scanner(System.in);
 
 		// Create variables
-		int v;
-		int t;
-		int d;
+		int v = 0;
+		int t = 0;
+		int d = 0;
 		String data; 
 
 		// Input for variables
 		System.out.println("enter V/D/T: ");
 		data = sc.next().toUpperCase();
 		System.out.println("VALUE:");
-		v= data.equals("V")?sc.nextInt():0;
-		d= data.equals("D")?sc.nextInt():0;
-		t= data.equals("T")?sc.nextInt():0;
+		switch (data) {
+		case "V" -> {v=sc.nextInt();}
+		case "D" -> {d=sc.nextInt();}
+		case "T" -> {t=sc.nextInt();}
+		default -> {System.out.println("LETRA INCORRECTA");}
+		};
 		
 		System.out.println("enter V/D/T: ");
 		data = sc.next().toUpperCase();
 		System.out.println("VALUE:");
-		v= data.equals("V")?sc.nextInt():v;
-		d= data.equals("D")?sc.nextInt():d;
-		t= data.equals("T")?sc.nextInt():t;
+		switch (data) {
+		case "V" -> {v=sc.nextInt();}
+		case "D" -> {d=sc.nextInt();}
+		case "T" -> {t=sc.nextInt();}
+		default -> {System.out.println("LETRA INCORRECTA");}
+		};
 		
 		if (v!=0 && d!=0) {
 			t= d/v;
