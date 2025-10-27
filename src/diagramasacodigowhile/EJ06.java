@@ -2,11 +2,13 @@ package diagramasacodigowhile;
 
 import java.util.Scanner;
 
-public class EJ01 {
+public class EJ06 {
 
 	public static void main(String[] args) {
 		/* PRUEBAS A REALIZAR
 		 * 1. Check negative numbers
+		 * 2. Check count 18 
+		 * 
 		 */
 		
 		// new scanner
@@ -14,22 +16,20 @@ public class EJ01 {
 
 		// Create variables
 		int num;
-		int num1 = 0;
+		int numMax = 0;
 
 		// Input for variables
 		System.out.println("Introduce un número: ");
 		num = sc.nextInt();
 		
-		
 		//sumar todos los números
-		while (num >0) {
-			num1 += num; 
-			System.out.println("Introduce otro número (negativo para terminar): ");
+		while (num>0) {
+			if (num>numMax) {numMax=num;}
 			num = sc.nextInt();
 		}
 		
 		//Mostrar resultados
-		System.out.println("Suma total: "+ num1);
+		System.out.println("Número alto: "+ numMax);
 
 		// Close scanner
 		sc.close();

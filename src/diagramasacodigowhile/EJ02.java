@@ -2,7 +2,7 @@ package diagramasacodigowhile;
 
 import java.util.Scanner;
 
-public class EJ01 {
+public class EJ02 {
 
 	public static void main(String[] args) {
 		/* PRUEBAS A REALIZAR
@@ -14,7 +14,7 @@ public class EJ01 {
 
 		// Create variables
 		int num;
-		int num1 = 0;
+		int i = 0;
 
 		// Input for variables
 		System.out.println("Introduce un número: ");
@@ -23,13 +23,13 @@ public class EJ01 {
 		
 		//sumar todos los números
 		while (num >0) {
-			num1 += num; 
+			i++; 
 			System.out.println("Introduce otro número (negativo para terminar): ");
 			num = sc.nextInt();
 		}
 		
 		//Mostrar resultados
-		System.out.println("Suma total: "+ num1);
+		System.out.println("Total introducido: "+ i);
 
 		// Close scanner
 		sc.close();
