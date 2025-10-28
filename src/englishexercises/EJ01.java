@@ -15,6 +15,8 @@ public class EJ01 {
 
 		// Create variables
 		int screen;
+		final double SCR38 = 75.99;
+		final double SCR43 = 99.99;
 		String extra;
 		double pri = 375.99;
 
@@ -27,18 +29,15 @@ public class EJ01 {
 		// Enter value and evaluate and solve 
 		System.out.println("Antivirus software (65.99) Y/N:");
 		extra = sc.next().toLowerCase();
-		if (extra.equals("y")) {
-			pri = pri + 65.99;
-		}
+		if (extra.equals("y")) {pri = pri + 65.99;}
+		
 		System.out.println("Printer (125.00) Y/N:");
 		extra = sc.next().toLowerCase();
-		if (extra.equals("y")) {
-			pri = pri + 125.00;
-		}
+		if (extra.equals("y")) {pri = pri + 125.00;}
 		
 		switch (screen) {
-		case 1 -> pri = pri + 75.99; 
-		case 2 -> pri = pri + 99.99; 
+		case 1 -> pri = pri + SCR38; 
+		case 2 -> pri = pri + SCR43; 
 		}; 
 		
 		
