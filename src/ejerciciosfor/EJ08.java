@@ -9,23 +9,20 @@ public class EJ08 {
 		Scanner sc = new Scanner(System.in); 
 		
 		//Create variables 
-		int n, n1; 
+		int n, n1, temp, tempM; 
 		System.out.println("Introduce in número: ");
 		n = sc.nextInt();
 		System.out.println("Introduce otro número: ");
 		n1 = sc.nextInt();
 		
-		if (n>n1) {
-			System.out.println("el primer número es mayor");
-			for (int i = n1; i<n; i++) {
-				System.out.println(i);
-			}
-		}else {
-			System.out.println("el segundo número es mayor");
-			for (int i = n; i<n1; i++) {
-				System.out.println(i);
-			}
+		temp = n>n1?n1:n;
+		tempM= n>n1?n:n1;
+		System.out.println(n>n1?"El primero es mayor":"El segundo es mayor");
+	
+		for (int i = ++temp; i<tempM; i++) {
+			System.out.println(i);
 		}
+		
 			
 		
 		sc.close();
