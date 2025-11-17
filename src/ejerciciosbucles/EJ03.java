@@ -7,8 +7,9 @@ public class EJ03 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int a, b; 
+		int a, b, i; 
 		int max,min;
+		boolean u = true; 
 		
 		System.out.println("Introduce a:");
 		a =sc.nextInt();
@@ -17,9 +18,12 @@ public class EJ03 {
 		
 		min =Math.min(a, b);
 		max = Math.max(a, b);
+		i= min;
 		
-		for (int i =min; i>=0; i--) {
-			if (min%i==0 && max%i==0) {System.out.println("MCD "+i); break;}
+		while (u) {
+			--i; 
+			if (min%i==0 && max%i==0) {System.out.println("MCD "+i); u = false;}
+			
 		}
 		
 		sc.close();
