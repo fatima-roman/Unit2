@@ -15,17 +15,17 @@ public class EJ06 {
 		Scanner sc = new Scanner(System.in);
 
 		// Create variables
-		int num;
-		int numMax = 0;
+		double num;
+		double numMax = 0;
 
 		// Input for variables
-		System.out.println("Introduce un número: ");
-		num = sc.nextInt();
+		System.out.println("Introduce un número (-1 para terminar): ");
+		num = sc.nextDouble();
 		
 		//sumar todos los números
-		while (num>0) {
+		while (num!=-1) {
 			if (num>numMax) {numMax=num;}
-			num = sc.nextInt();
+			num = sc.nextDouble();
 		}
 		
 		//Mostrar resultados

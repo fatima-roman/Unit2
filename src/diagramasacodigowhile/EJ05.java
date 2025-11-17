@@ -18,7 +18,7 @@ public class EJ05 {
 		int num;
 		int numMayor = 0;
 		int sumaEdades = 0;
-		int mediaEdades = 0;
+		double mediaEdades = 0;
 		int i = 0;
 
 		// Input for variables
