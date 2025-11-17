@@ -16,14 +16,20 @@ public class EJ03 {
 		b = sc.nextInt();
 
 		min = Math.min(a, b);
-		i = min;
 
-		while (a % i == 0 && b % i == 0) {
+		i = min;
+		
+        while (a % i != 0 || b % i != 0) {
+            i--; 
+        }
+		System.out.println("MCD: " + i);
+
+		/*while (a % i == 0 && b % i == 0) {
 			if (a % i == 0 && b % i == 0) {
 				System.out.println("MCD " + i);
 			}
 			--i;
-		}
+		}*/
 
 		sc.close();
 	}

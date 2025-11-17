@@ -15,11 +15,10 @@ public class EJ04 {
         System.out.println("Introduce b:");
         b = sc.nextInt();
 
-        // Determinar mayor y menor
+        //  mayor y menor
         min = Math.min(a, b);
         max = Math.max(a, b);
 
-        // Buscar el MCM sin usar break
         int i = max;
 
         // Seguimos mientras i NO sea múltiplo del menor
