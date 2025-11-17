@@ -6,26 +6,25 @@ public class EJ03 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
-		int a, b, i; 
-		int max,min;
-		boolean u = true; 
-		
+
+		int a, b, i;
+		int min;
+
 		System.out.println("Introduce a:");
-		a =sc.nextInt();
+		a = sc.nextInt();
 		System.out.println("Introduce b:");
 		b = sc.nextInt();
-		
-		min =Math.min(a, b);
-		max = Math.max(a, b);
-		i= min;
-		
-		while (u) {
-			--i; 
-			if (min%i==0 && max%i==0) {System.out.println("MCD "+i); u = false;}
-			
+
+		min = Math.min(a, b);
+		i = min;
+
+		while (a % i == 0 && b % i == 0) {
+			if (a % i == 0 && b % i == 0) {
+				System.out.println("MCD " + i);
+			}
+			--i;
 		}
-		
+
 		sc.close();
 	}
 
