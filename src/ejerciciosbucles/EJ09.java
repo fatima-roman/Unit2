@@ -10,6 +10,7 @@ public class EJ09 {
 		long n;
         long original;
         long invertido = 0;
+        long dig;
 		
         do {
 	        System.out.print("Introduce un número mayor o igual que 0: ");
@@ -20,7 +21,7 @@ public class EJ09 {
 
 
         while (n > 0) {
-            long dig = n % 10;
+            dig = n % 10;
             invertido = invertido * 10 + dig;
             n /= 10;
         }
