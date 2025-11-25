@@ -39,6 +39,8 @@ public class temp {
         	
         	System.out.println();
         }//for inicial del tamaño total 
+        
+        sc.close();
 	}
 
 }
