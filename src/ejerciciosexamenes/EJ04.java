@@ -10,39 +10,37 @@ public class EJ04 {
 		
 		//Variable para introducir numero
 		int n; 
+		int nTotalFilas;
+		int espacios;
+		int asteriscos;
 		
 		//Pedir datos al usuario 
         System.out.print("Introduce un número: ");
         n = sc.nextInt();
         
-        for (int j=1; j<=n*2; j++) {
-        	//Espacios parte 1 
-        	if (j<=n-1) {
-	        	for (int i=n-1; i>=j;--i) {
-		        	System.out.print("_");
-		        }	
-        	}//fin if espacios parte1
-        	
-        	//Espacios parte2
-        	if (j>=n+1) {
-	        	for (int i=1;i<=(j/2)-1;i++) {
-	        		System.out.print("-");
-	        	}
-        	}//fin if espacios parte2
-        	
-        	//lineas inicial y final
-        	if (j==(n*2)-1 || j==1) {
-        		for (int i=1; i<=n; i++ ) {
-        			System.out.print("*");
-        		}
-        	}else if (j<=(n*2)-1){//fin if lineas inicio y fin
-	        	for (int i=n; i<=n*2;i=i+2) {
-	        		System.out.print("p");
-	        	}	
+        nTotalFilas = n*2-1; //Lineas total
+        
+        for (int i=1;i<=nTotalFilas;i++) {
+        	if (i <= n-1) { //calculo numero de espacios y asteriscos iniciales 
+        		espacios = n-1 * (i-1) -1;
+        		asteriscos = n+2 *(i-1);
+        	}else { //calculo numero de espacios y asteriscos finales
+        		espacios = i - n;
+                asteriscos = n + 2 * (nTotalFilas - i);
         	}
-
+        	
+        	for (int k=1; k<=espacios; k++) {
+        		System.out.print(" ");
+        	}
+        	
+        	for (int k=1; k<=asteriscos;k++) {
+        		System.out.print("*");
+        	}
+        	
         	System.out.println();
-        }//fin for inicial
+        }//for inicial del tamaño total 
+        
+        sc.close();
         
 	}
 

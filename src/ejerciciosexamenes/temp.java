@@ -11,7 +11,6 @@ public class temp {
 		//Variable para introducir numero
 		int n; 
 		int nTotalFilas;
-		int anchoFilas;
 		int espacios;
 		int asteriscos;
 		
@@ -20,13 +19,12 @@ public class temp {
         n = sc.nextInt();
         
         nTotalFilas = n*2-1; //Lineas total
-        anchoFilas = n*2+1; //Ancho MAX 
         
         for (int i=1;i<=nTotalFilas;i++) {
-        	if (i <= n-1) {
-        		espacios = n -1 *(i-1);
+        	if (i <= n-1) { //calculo numero de espacios y asteriscos iniciales 
+        		espacios = n-1 * (i-1) -1;
         		asteriscos = n+2 *(i-1);
-        	}else {
+        	}else { //calculo numero de espacios y asteriscos finales
         		espacios = i - n;
                 asteriscos = n + 2 * (nTotalFilas - i);
         	}
