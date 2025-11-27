@@ -12,6 +12,8 @@ public class EJ05 {
 		
 		//Variable para introducir numero
 		int tamanoEscaque;
+		int fila; 
+		boolean negra; 
 		int tInicial = 8; //nº lineas
 		final int TLINEA = 8; //nº de casillas por linea
 		
@@ -19,38 +21,18 @@ public class EJ05 {
         System.out.print("Introduce el tamaño del escaque: ");
         tamanoEscaque = sc.nextInt();
         
-        tInicial *= tamanoEscaque;
+        tInicial *= tamanoEscaque; //nº de lineas total segun tamaño escaque 
         
-        for (int i=1; i<=tInicial;i++) {
+        for (int i=2; i<=tInicial+1;i++) {
         	
-        	if (tInicial%i!=0) {
-	        	for (int k=1;k<=TLINEA;k++) {
-	        		if (k%tamanoEscaque!=0) {
-	        			for (int j =1; j<=tamanoEscaque;j++) {
-	        				System.out.print(" ");
-	        			}
-	        		}else {
-	        			for (int j =1; j<=tamanoEscaque;j++) {
-	        				System.out.print("#");
-	        			}
-	        		}
-	        	}	
-        	}else {
-        		for (int k=1;k<=TLINEA;k++) {
-	        		if (k%tamanoEscaque!=0) {
-	        			for (int j =1; j<=tamanoEscaque;j++) {
-	        				System.out.print("#");
-	        			}
-	        		}else {
-	        			for (int j =1; j<=tamanoEscaque;j++) {
-	        				System.out.print(" ");
-	        			}
-	        		}
-	        	}	
+        	fila =i/tamanoEscaque;
+        	for (int k=0; k<TLINEA;k++) {
+        		negra = (fila+k)%2==0;
+        		for (int p=0; p<tamanoEscaque;p++) {
+        			System.out.print(negra?"#":" ");
+        		}
         	}
-        	
-        	
-        	
+
         	System.out.println();
         } //FIN PRIMER FOR
         
