@@ -2,8 +2,6 @@ package ejerciciosexamenes;
 
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 public class EJ05 {
 
 	public static void main(String[] args) {
