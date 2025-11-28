@@ -21,7 +21,7 @@ public class EJ05 {
         
         tInicial *= tamanoEscaque; //nº de lineas total segun tamaño escaque 
         
-        for (int i=2; i<=tInicial+1;i++) {
+        for (int i=0; i<=tInicial-1;i++) {
         	
         	fila =i/tamanoEscaque;
         	for (int k=0; k<TLINEA;k++) {
